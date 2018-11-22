@@ -11,6 +11,7 @@
 .inventory-title {
   margin-top: 2rem;
   font-size: 24px;
+  font-weight: 500;
   margin-bottom: 2rem;
 }
 
@@ -36,7 +37,9 @@
 }
 
 .inventory-table table thead {
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: normal;
+  color: #3A3A3A;
 }
 
 .inventory-table table thead tr {
@@ -55,6 +58,7 @@
 
 .inventory-table table tbody tr {
   height: 70px;
+  font-weight: 600;
 }
 
 .inventory-table table tbody tr td {
@@ -65,6 +69,7 @@
   color: #004892;
   display: block;
   font-size: 14px;
+  font-weight: 600;
 }
 
 .inventory-table table tbody tr:nth-child(even) {

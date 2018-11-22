@@ -6,6 +6,7 @@
 .inventory-title{
     margin-top: 2rem;
     font-size: 24px;
+    font-weight: 500;
     span{
         margin-left: 4rem;
     }
@@ -21,7 +22,9 @@
         width: 95%;
         border-collapse: collapse;
             thead{
-                font-size: 14px;
+                font-size: 12px;
+                font-weight: normal;
+                color: #3A3A3A;
                 tr{
                     text-align: left;
                     background-color: white;
@@ -36,6 +39,7 @@
                 font-size: 12px;
                 tr{
                     height: 70px;
+                    font-weight: 600;
                     td{
                         // border: 1px solid black;
                         margin: 0;
@@ -43,6 +47,7 @@
                             color: #004892;
                             display: block;
                             font-size: 14px;
+                            font-weight: 600;
                         }
                     }
                 }
