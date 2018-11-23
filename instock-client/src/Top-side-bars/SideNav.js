@@ -16,7 +16,7 @@ class Header extends Component {
                 </div>
                 <div className='menu-options'>
                     <Link to={'/inventory'}/>
-                    <Link to={'/locations'}/>
+                    <Link to={'/warehouse'}/>
                     <p className='version'>Version 1.0</p>
                     </div>
               </div>
