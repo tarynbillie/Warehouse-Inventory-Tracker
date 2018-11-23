@@ -1,5 +1,9 @@
 const express = require('express');
 const app = express();
+//you will need to create 'productInventoryList' for below line to work 
+// const productList = require('productInventoryList');
+const productList = [];
+// delete above empty array when file is created and available. 
 
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 8080;
@@ -15,7 +19,13 @@ app.all('/*', function (req, res, next) {
     next();
 });
 
-
+xprex.get('/product/:id', (req, res) => {
+    const productCode = parseInt(req.params.id);
+    const productItem = productList.find((pItem) =>
+    { return pItem.id === productCode})
+    console.log(productItem);
+    res.json(productItem); 
+  })
 
 
 
