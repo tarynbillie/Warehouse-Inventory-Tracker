@@ -1,10 +1,11 @@
 import React from 'react';
+import './PDStyles.css';
 
-const cambam = 1 
 
-inventory = [
+
+let inventory = [
     {
-        productID: 001,
+        productID: 1,
         warehouseID: 'jhdsfkjhskjdh',
         name: 'name',
         description: '...',
@@ -18,26 +19,50 @@ inventory = [
     }
  ]
 
- class ProductDetail extends Component {
+ class ProductDetail extends React.Component {
      state = {  }
      render() { 
          return ( 
              <div className='ProductDetail__Page'>
-                <div className='back'>Back</div>
+                <div className='back'> ‹Back</div>
                 <div className='product-box'>
                     <div className='product-box__text'>
                         <h3 className='product-box__title'>Product Name Summary</h3>
-                        <p>DESCRIPTION:</p>
-                        <p>LAST ORDERED:</p>
-                        <p>ORDERED BY:</p>
-                        <p>REFERENCE NUMBER:</p>
-                        <p>PRODUCT CATAGORY:</p>
-                        <p>QUANTITY:</p>
-                        <p>LOCATION:</p>
-                        <p>STATUS:</p>
+                        <div className='product-box__row'>
+                            <p className='product-box__catagory'>DESCRIPTION: </p>
+                            <p> Here is a more detailed summary of the product name, it’s uses, industries and possible attributes that could be used to describe the product</p>
+                        </div>
+                        <div className='product-box__row'>
+                            <p className='product-box__catagory'>LAST ORDERED: </p><p> 05/24/2018</p>
+                        </div>
+                        <div className='product-box__row'>
+                            <p className='product-box__catagory'>ORDERED BY: </p>
+                            <p> Mark Saunders</p>
+                        </div>
+                        <div className='product-box__row'>
+                            <p className='product-box__catagory'>REFERENCE NUMBER: </p>
+                            <p> JK2020FD7811201</p>
+                        </div>
+                        <div className='product-box__row'>
+                            <p className='product-box__catagory'>PRODUCT CATAGORY: </p>
+                            <p> Industrial, Automotive, Heavy Industry</p>
+                        </div>
+                        <div className='product-box__row'>
+                            <p className='product-box__catagory'>QUANTITY: </p>
+                            <p> 12000</p>
+                        </div>
+                        <div className='product-box__row'>
+                            <p className='product-box__catagory'>LOCATION: </p>
+                            <p> Toronto, CAN</p>
+                        </div>
+                        <div className='product-box__row'>
+                            <p className='product-box__catagory'>STATUS:</p>
+                            <p> In Stock</p>
+                        </div>
                     </div>
-                    <div className='new-order-button'>New Order</div>
-
+                    <div className='new-order-button'>
+                        <p className='new-order-text'>New Order</p>
+                    </div>
                 </div>
 
              </div>
