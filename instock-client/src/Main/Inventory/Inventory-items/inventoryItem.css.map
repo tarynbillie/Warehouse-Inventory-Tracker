@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "inventoryItem.scss"
+    ],
+    "names": [],
+    "file": "inventoryItem.css"
+}
