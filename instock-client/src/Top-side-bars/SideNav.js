@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
-import Inventory from './Inventory';
-import Locations from './Locations'; 
-import Users from './Users'; 
-import './css/app.css';
+import { BrowserRouter as Router, Link} from 'react-router-dom';
+import './css/appx.css';
 
-class Header extends Component {
+class SideNav extends Component {
 
     render() {
         return (
@@ -14,14 +11,32 @@ class Header extends Component {
                 <div className='side-nav-header-image'>
                     <img src="./WordMark/Wordmark.svg" alt='company logo'/>
                 </div>
-                <div className='menu-options'>
-                    <Link to={'/inventory'}/>
-                    <Link to={'/warehouse'}/>
-                    <p className='version'>Version 1.0</p>
+                <Router>
+                    <div className='menu-options'>
+                        <Link to={'/inventory'} className='mnu-grp'>
+       
+                                <img src='./icons/inventory.svg' alt="clip board" className='menu-icon'/>
+                                <p className="opt">Inventory</p>
+                          
+                        </Link>
+                        <Link to={'/location'} className='mnu-grp'>
+                           
+                                <img src='./icons/location.svg' alt="folded map" className='menu-icon'/>
+                                <p className='opt'>Locations</p>
+                          
+                        </Link>
+                        <Link to={'/users'} className='mnu-grp'>
+               
+                                <img src='./icons/user.svg' alt="people identifier" className='menu-icon'/>
+                                <p className='opt'>Users</p>
+                          
+                        </Link>
+                        <p className='version'>Version 1.0</p>
                     </div>
+                </Router>
               </div>
           </>
         )
 }
 }
-export default Header;
+export default SideNav;

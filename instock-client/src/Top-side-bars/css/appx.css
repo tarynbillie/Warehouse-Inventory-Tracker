@@ -100,10 +100,10 @@
 
 .side-nav-bar {
   width: 15%;
+  min-width: 15%;
   height: 100%;
   margin: 0;
   background-color: #004892;
-  text-align: center;
 }
 
 .main-body-section {
@@ -122,34 +122,69 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .side-nav-header-image {
+  width: 50%;
   margin-top: 2em;
+  margin-left: 2em;
 }
 
 .menu-options {
-  margin-top: 5em;
-  font-family: 'AvenirRegular';
-  font-weight: normal;
-  font-size: normal;
+  margin-top: 6em;
 }
 
-.inventory, .locations, .users {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  color: #adadad;
+a {
+  text-decoration: none;
+  width: 80%;
 }
 
-.inventory:hover, .locations:hover, .users:hover {
-  font-family: 'AvenirHeavy';
-  font-weight: normal;
-  font-size: normal;
+a:visited {
+  color: #dedede;
+}
+
+.mnu-grp {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 2em;
+  color: #fff;
+  opacity: 0.4;
+}
+
+.menu-icon {
+  width: 20px;
+  height: auto;
+  margin: 0;
+}
+
+.opt {
+  width: 70%;
+  height: auto;
+  margin-left: 1em;
+}
+
+.mnu-grp:hover {
+  opacity: unset;
   color: #fff;
 }
 
 .version {
-  margin-top: 38em;
+  text-align: center;
+  margin-top: 28em;
   color: #dedede;
 }
 
@@ -179,7 +214,7 @@ header {
 .drp-down {
   width: 120px;
   height: 52px;
-  margin-left: 25em;
+  margin-left: 0em;
 }
 
 .user-pic {

@@ -111,10 +111,10 @@ font-style: normal;
 }
 .side-nav-bar{
   width: 15%; 
+  min-width: 15%; 
   height: 100%; 
-  margin: 0 ; 
+  margin: 0; 
   background-color: #004892;
-  text-align: center;
 }
 .main-body-section{
   width: 68%;  
@@ -127,26 +127,53 @@ header{
   margin: 0; 
   margin-top: 1em;
   display: flex; 
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
+  justify-content: space-between; 
 }
 .side-nav-header-image{
+    width: 50%; 
   margin-top: 2em;
+  margin-left: 2em;
 }
 .menu-options{
-  margin-top: 5em;
-  @include fFreg();
+    margin-top: 6em;
 }
-.inventory, .locations, .users{
-    margin-top: 1em;
-    margin-bottom: 1em;
-    color: #adadad;
+a{
+    text-decoration: none; 
+    width: 80%; 
 }
-.inventory:hover, .locations:hover, .users:hover {
-    @include fFheavy();
-    color: #fff;
+a:visited{
+    color: #dedede;
+}
+.mnu-grp{
+    width: 80%; 
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    margin: 0; 
+    margin-top: 2em; 
+    margin-bottom: 2em; 
+    margin-left: 2em; 
+    color: #fff; 
+    opacity: 0.4; 
+}
+.menu-icon{
+    width: 20px; 
+    height: auto; 
+    margin: 0;  
+}
+.opt{
+    width: 70%; 
+    height: auto;  
+    margin-left: 1em; 
+}
+.mnu-grp:hover {
+    opacity: unset;
+    color: #fff; 
 }
 .version{
-    margin-top: 38em;
+    text-align: center; 
+    margin-top: 28em;
     color: #dedede;
 }
 .search-group{
@@ -170,7 +197,7 @@ header{
 .drp-down{
     width: 120px; 
     height: 52px;
-    margin-left: 25em;
+    margin-left: 0em;
 }
 .user-pic{
     width: 30px;
