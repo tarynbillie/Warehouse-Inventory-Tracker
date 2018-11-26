@@ -6,6 +6,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #F7F7F7;
 }
 
 .inventory-title {
@@ -27,7 +28,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   color: #7C7C7C;
-  margin-bottom: 5rem;
 }
 
 .inventory-table table {

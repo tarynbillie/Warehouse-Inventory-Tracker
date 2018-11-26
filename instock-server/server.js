@@ -19,7 +19,7 @@ app.all('/*', function (req, res, next) {
     next();
 });
 
-xprex.get('/product/:id', (req, res) => {
+app.get('/product/:id', (req, res) => {
     const productCode = parseInt(req.params.id);
     const productItem = productList.find((pItem) =>
     { return pItem.id === productCode})
