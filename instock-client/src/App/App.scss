@@ -1,6 +1,13 @@
 $primary: #004892;
 $secondPrimary: #003b77;
 
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    // overflow-x: hidden;
+  }
+
 
 @font-face {
     font-family: 'Avenir';
@@ -25,6 +32,10 @@ $secondPrimary: #003b77;
 
 .App{
     display: flex;
-    justify-content: flex-end;
 }
+
+.right-body{
+    width: 85%;
+}
+
 

@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import { BrowserRouter as Router, Link} from 'react-router-dom';
+=======
+import {Link} from 'react-router-dom';
+// import Inventory from './Inventory';
+// import Locations from './Locations'; 
+// import Users from './Users'; 
+>>>>>>> 904fa985dcfecf98c1542d4c947fa6d5f0468804
 import './css/appx.css';
 
 class SideNav extends Component {
@@ -9,8 +16,9 @@ class SideNav extends Component {
           <>
               <div className="side-nav-bar">
                 <div className='side-nav-header-image'>
-                    <img src="./WordMark/Wordmark.svg" alt='company logo'/>
+                    <img src="/Assets/Wordmark/Wordmark.svg" alt='company logo'/>
                 </div>
+<<<<<<< HEAD
                 <Router>
                     <div className='menu-options'>
                         <Link to={'/inventory'} className='mnu-grp'>
@@ -32,6 +40,12 @@ class SideNav extends Component {
                           
                         </Link>
                         <p className='version'>Version 1.0</p>
+=======
+                <div className='menu-options'>
+                    <Link to={'/inventory'}> Inventory </Link>
+                    <Link to={'/warehouses'}> Warehouse </Link>
+                    <p className='version'>Version 1.0</p>
+>>>>>>> 904fa985dcfecf98c1542d4c947fa6d5f0468804
                     </div>
                 </Router>
               </div>
