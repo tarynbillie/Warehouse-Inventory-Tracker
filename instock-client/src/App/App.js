@@ -5,7 +5,6 @@ import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom
 >>>>>>> 37899b93baed175a6c17967bfea811309af9feca
 import './App.css';
 import Warehouse from '../Main/Warehouse/Warehouse.js';
-import ProductDetails from './Main/ProductDetails/ProductDetails.js'
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 import Inventory from '../Main/Inventory/Inventory.js';
 import ProductDetails from '../Main/Product-details/ProductDetails.js';

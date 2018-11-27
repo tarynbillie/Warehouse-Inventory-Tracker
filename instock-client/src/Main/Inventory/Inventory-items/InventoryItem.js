@@ -1,11 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 
 class InventoryItem extends React.Component{
     render(){
         return(
             <tr>
                 <td className='td-left'>
-                    <span className='td-name'>{this.props.name}</span>
+                <Link to={'/inventory/' + this.props.id}><span className='td-name'>{this.props.name}</span></Link>
+
                     {this.props.desc}
                 </td>
                 <td>
@@ -21,7 +24,7 @@ class InventoryItem extends React.Component{
                     {this.props.status}
                 </td>
                 <td>
-                    <span id={this.props.id}>❌</span>
+                    <div className='inventory-item__delete-icon' id={this.props.id} onClick={this.props.delete}></div>
                 </td>
             </tr>
         )
