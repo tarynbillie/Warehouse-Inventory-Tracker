@@ -1,11 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 
 class InventoryItem extends React.Component{
     render(){
         return(
             <tr>
                 <td className='td-left'>
-                    <span className='td-name'>{this.props.name}</span>
+                <Link to={'/inventory/' + this.props.id}><span className='td-name'>{this.props.name}</span></Link>
+
                     {this.props.desc}
                 </td>
                 <td>

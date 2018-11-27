@@ -92,4 +92,21 @@
 .inventory-item__delete-icon:hover {
   background-image: url("../../icons/deleteIcon-hover.svg");
 }
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 650px) {
+  table {
+    width: 100%;
+  }
+  .td-left {
+    padding-left: 0;
+  }
+}
 /*# sourceMappingURL=inventory.css.map */
