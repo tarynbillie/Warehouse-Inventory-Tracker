@@ -62,5 +62,17 @@
     padding-left: 35px;
 }
 
+.inventory-item__delete-icon{
+    background-image: url('../../icons/deleteIcon.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 22px;
+    width: 22px;
+}
+
+.inventory-item__delete-icon:hover{
+    background-image: url('../../icons/deleteIcon-hover.svg');
+}
 
 

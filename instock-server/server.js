@@ -144,9 +144,11 @@ app.get('/inventory', (req,res)=>{
     res.json(inventory)
 })
 
-
-
-
+app.delete('/inventory/deleteItem/:id', (req,res) => {
+    let itemIndex = inventory.findIndex(item => item.productID === Number(req.params.id));
+    inventory.splice(itemIndex, 1);
+    res.json({msg: 'item deleted from inventory'});
+})
 
 app.listen(PORT, (err) => {
     if (err) {

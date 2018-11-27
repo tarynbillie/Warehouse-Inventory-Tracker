@@ -12,7 +12,7 @@ class SideNav extends Component {
           <>
               <div className="side-nav-bar">
                 <div className='side-nav-header-image'>
-                    <img src="./Assets/Wordmark/Wordmark.svg" alt='company logo'/>
+                    <img src="/Assets/Wordmark/Wordmark.svg" alt='company logo'/>
                 </div>
                 <div className='menu-options'>
                     <Link to={'/inventory'}> Inventory </Link>

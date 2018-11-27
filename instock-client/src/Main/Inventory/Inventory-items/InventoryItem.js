@@ -21,7 +21,7 @@ class InventoryItem extends React.Component{
                     {this.props.status}
                 </td>
                 <td>
-                    <span id={this.props.id}>❌</span>
+                    <div className='inventory-item__delete-icon' id={this.props.id} onClick={this.props.delete}></div>
                 </td>
             </tr>
         )
