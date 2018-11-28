@@ -144,7 +144,13 @@ app.get('/inventory', (req,res)=>{
     res.json(inventory)
 })
 
+app.post('/warehouses', (req, res) => {
+    const newWarehouse = req.body;
+    warehousesInfo.push(newWarehouse);
+    res.json({ msg: 'You posted a new warehouse' })
+    res.status(400).send('Oppsies');
 
+})
 
 
 

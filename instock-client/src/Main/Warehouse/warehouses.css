@@ -1,0 +1,16 @@
+.modal-btn {
+  background-color: #004892;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.modal-btn img {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+/*# sourceMappingURL=warehouses.css.map */

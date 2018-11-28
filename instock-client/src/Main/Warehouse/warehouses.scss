@@ -1,0 +1,16 @@
+$primary: #004892;
+ 
+.modal-btn{
+    background-color: $primary;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    cursor: pointer;
+    img {
+        transform: rotate(45deg);
+    }
+}
+

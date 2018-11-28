@@ -1,0 +1,115 @@
+$primary: #004892;
+$secondPrimary: #003b77;
+$accent: #FFFFFF;
+$secondAccent: #CACACA;
+$thirdAccent: #ADADAD;
+$fourthAccent: #7C7C7C;
+
+@mixin inputs {
+    height: 2.6rem;
+    width: 15rem;
+    fill: $accent;
+    border-radius: 2px;
+    border: 1px solid $secondAccent;
+    outline: none;
+    margin-top: 0.3rem;
+    font-size: 14px;
+    padding-left: 14px;
+
+}
+
+@mixin placeholder {
+    font-size: 14px;
+    color: $fourthAccent;
+    opacity: 100%;
+}
+
+.form-container {
+    .inside-container {
+        &__top {
+            margin: 1rem 1rem 0 4rem;
+            display: flex;
+            justify-content: space-between;
+            .close {
+                cursor: pointer;
+                p {
+                    margin: 0;
+                    font-size: 12px;
+                    color: $secondAccent;
+                    &:hover {
+                        color: $thirdAccent;
+                    }
+                }
+            }
+        }
+        form {
+            margin: 1rem 4rem;
+            display: flex;
+            flex-direction: column;
+            h4 {
+                margin-bottom: 0.5rem;
+                font-size: 14px;
+            }
+            label {
+                display: flex;
+                flex-direction: column;
+                font-size: 12px;
+                font-weight: 600;
+                margin-top: 1rem;
+                input {
+                    @include inputs();
+                }
+                input::placeholder {
+                    @include placeholder();
+                }
+                select {
+                    @include inputs();
+                    background: url(../../icons/Dropdown.svg) no-repeat;
+                    background-size: 10px;
+                    background-position: 95%;
+                    appearance: none;
+                    padding: 0 0.8rem;
+                    // color: $fourthAccent;
+                }
+                select select {
+                    background: transparent;
+                    appearance: none;
+                    width: 100px;
+                    font-size: 14px;
+                    border: 0;
+                    height: 17px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+                select::placeholder {
+                    @include placeholder();
+                }
+            }
+            .information {
+                display: flex;
+                justify-content: flex-end;
+                padding-top: 3rem;
+                &__first {
+                    padding-right: 5.5rem;
+                }
+            }
+        }
+        .btn {
+            display: flex;
+            justify-content: flex-end;
+            button {
+                margin: 1.5rem 4rem 0 0;
+                background-color: $primary;
+                border: none;
+                border-radius: 3px;
+                height: 38px;
+                width: 131px;
+                color: $accent;
+                font-size: 14px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+    }
+}
