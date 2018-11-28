@@ -1,0 +1,58 @@
+.warehouses-page {
+  background-color: #F7F7F7;
+}
+
+.warehouse-page__titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0px 40px;
+}
+
+.location {
+  font-size: 18px;
+}
+
+.filter {
+  font-size: 12px;
+  margin-bottom: 2px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: auto;
+}
+
+.warehouse-block {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border: solid #CACACA 1px;
+}
+
+.warehouse-name {
+  color: #003B77;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.warehouse__info-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 12px;
+  text-align: left;
+  margin: 10px 20px;
+}
+
+.address-block {
+  margin-left: 0px;
+}
+/*# sourceMappingURL=Warehouse.css.map */

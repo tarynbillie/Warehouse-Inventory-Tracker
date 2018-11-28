@@ -1,0 +1,55 @@
+$blueButton: #003B77;
+$paleGrey: #F7F7F7;
+$textGrey: #ADADAD;
+$borderGrey: #CACACA;
+$paleGrey: #F7F7F7;
+
+.warehouses-page{
+    background-color: $paleGrey;
+}
+
+.warehouse-page__titles{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 40px;
+}
+
+.location{
+    font-size: 18px;
+}
+
+.filter{
+    font-size: 12px;
+    margin-bottom: 2px;
+    height: fit-content;
+    margin-top: auto;    
+}
+
+.warehouse-block{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    
+    border: solid $borderGrey 1px;
+
+}
+
+.warehouse-name{
+    color: $blueButton;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.warehouse__info-block{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    text-align: left;
+    margin: 10px 20px;
+}
+
+.address-block{
+    margin-left: 0px;
+}
