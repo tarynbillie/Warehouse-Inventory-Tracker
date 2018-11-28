@@ -30,7 +30,6 @@ app.get('/product/:id', (req, res) => {
 
 
 
-//--CAM- get all inventory--//
 inventory= [
     {
         productID: 1,
@@ -138,11 +137,62 @@ inventory= [
     },
 ]
 
+warehouseInfo=[
+    {
+        warehouseID: 1,
+        warehouseName: "Warehouse Number 1",
+        street: '123 Main Street West',
+        city: 'Toronto, Canada',
+        postal: 'M6J 2H2',
+        contactName:'Mara Weinberg, Warehouse Manager',
+        contactNumber: '+1 416 678 2345',
+        contactEmail: 'mweinberg@instack.com',
+        inventoryType: 'Industrial, Automotive, Heavy Industry'
+    },
+    {
+        warehouseID: 2,
+        warehouseName: "Warehouse Number 2",
+        street: '123 Main Street West',
+        city: 'Toronto, Canada',
+        postal: 'M6J 2H2',
+        contactName:'Mara Weinberg, Warehouse Manager',
+        contactNumber: '+1 416 678 2345',
+        contactEmail: 'mweinberg@instack.com',
+        inventoryType: 'Industrial, Automotive, Heavy Industry'
+    },
+    {
+        warehouseID: 3,
+        warehouseName: "Warehouse Number 3",
+        street: '123 Main Street West',
+        city: 'Toronto, Canada',
+        postal: 'M6J 2H2',
+        contactName:'Mara Weinberg, Warehouse Manager',
+        contactNumber: '+1 416 678 2345',
+        contactEmail: 'mweinberg@instack.com',
+        inventoryType: 'Industrial, Automotive, Heavy Industry'
+    },
+    {
+        warehouseID: 4,
+        warehouseName: "Warehouse Number 4",
+        street: '123 Main Street West',
+        city: 'Toronto, Canada',
+        postal: 'M6J 2H2',
+        contactName:'Mara Weinberg, Warehouse Manager',
+        contactNumber: '+1 416 678 2345',
+        contactEmail: 'mweinberg@instack.com',
+        inventoryType: 'Industrial, Automotive, Heavy Industry'
+    },
+]
 
 
 app.get('/inventory', (req,res)=>{
     res.json(inventory)
 })
+
+app.get('/warehouses', (req,res)=>{
+    res.json(warehouseInfo)
+})
+
 
 app.delete('/inventory/deleteItem/:id', (req,res) => {
     let itemIndex = inventory.findIndex(item => item.productID === Number(req.params.id));

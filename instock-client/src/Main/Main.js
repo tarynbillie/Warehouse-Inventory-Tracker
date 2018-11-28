@@ -5,6 +5,7 @@ import './main.css'
 class Main extends React.Component{
 
     render(){
+        console.log('dfgdfgfd')
         return(
             <div className='main'>
                 <Inventory />
