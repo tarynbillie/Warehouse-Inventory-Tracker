@@ -1,5 +1,6 @@
 import React from 'react';
 import InventoryItem from './Inventory-items/InventoryItem';
+import Warehouse from './Warehouse/Warehouse.js';
 import './inventory.css';
 
 let baseUrl = 'http://localhost:8080/';
@@ -7,19 +8,13 @@ let baseUrl = 'http://localhost:8080/';
 class Inventory extends React.Component{
 
     state = {
+
         inventory: []
     }
-
 
     getInventory = () => {
 
         let url = baseUrl + "inventory/"
-
-        if(this.match){
-            if(this.match.params.id){
-                url = url + this.match.params.id;
-            }
-        }   
 
         fetch(url)
         .then((resp) => {
@@ -48,10 +43,6 @@ class Inventory extends React.Component{
     }
 
     componentDidMount = () => {
-        this.getInventory();
-    }
-
-    componentDidUpdate = () => {
         this.getInventory();
     }
 

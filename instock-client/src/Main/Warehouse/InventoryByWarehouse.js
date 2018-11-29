@@ -1,18 +1,20 @@
 // this is the inventory list by warehouse 
 
 import React from 'react'; 
-import TableHeadingRow from './TableHeadingRow';
-import TableDataRows from './TableDataRows';
+import Inventory from './Inventory.js';
 
 // componentDidUpdate(prevProps, prevState){
 //     if(prevProps.match.params.id !==  this.props.match.params.id)
 //      this.getCommentData(this.props.match.params.id);
 //     }
-    const id = 0001;
 
-    getCommentData = (id, e) => {
+        state = {
+            warehouseInventory: []
+        }
+
+    getWarehouseItems = (id, e) => {
         if (e) e.preventDefault()
-        fetch(`http://localhost:8080/inventory${id}`)
+        fetch(`http://localhost:8080/warehouse${id}`)
           .then(serverAnswer => serverAnswer.json())
           .then(wrhsInv => {
             const warehouseInventory = wrhsInv
@@ -26,8 +28,7 @@ class InventoryByWarehouse extends React.Component{
     render(){
         return(
             <>  
-            <TableHeadingRow/>
-            <TableDataRows/>
+                <Inventory wdata={this.state.warehouseInventory}/>  
             </> // closeing take to <> short form <React.Fragment> encloses and returns singular from multiple components
         )
     }

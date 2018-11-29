@@ -1,6 +1,5 @@
-module.exports = {
+module.exports = [
 
-    warehouselocations:[
         {
             "id": "001", 
             "title": "Toronto",
@@ -68,4 +67,3 @@ module.exports = {
             }
         }
     ]
-}
