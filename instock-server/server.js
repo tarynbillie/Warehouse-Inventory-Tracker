@@ -1,9 +1,9 @@
 const express = require('express');
-const app = express();
-//you will need to create 'productInventoryList' for below line to work 
-// const productList = require('productInventoryList');
-const productList = [];
-// delete above empty array when file is created and available. 
+const app = express(); 
+const invList = require('./data/InventoryDataList');
+const whseList = require('./data/WarehouseDataList');
+console.log(invList);
+console.log(whseList);
 
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 8080;
@@ -19,6 +19,10 @@ app.all('/*', function (req, res, next) {
     next();
 });
 
+<<<<<<< HEAD
+// app.get('*', (req,res)=>
+// { res.status(404).render("sorry what you seek is not here!")})
+=======
 app.get('/product/:id', (req, res) => {
     const productCode = parseInt(req.params.id);
     const productItem = productList.find((pItem) =>
@@ -185,10 +189,36 @@ warehouseInfo=[
     },
 ]
 
+>>>>>>> 007afa65e274a905439458fab87b71bc500ef23e
 
 app.get('/inventory', (req,res)=>{
-    res.json(inventory)
+    res.json(invList)
 })
+<<<<<<< HEAD
+app.get('/warehouses', (req,res)=>{
+    res.json(whseList)
+})
+
+app.get('/warehouse/:id', (req, res) => {
+    const wareHouseidprovided = parseInt(req.params.id);
+//    const wareHouseidprovided = 1;
+    const invSublist = invList.filter((invItem) => 
+    { return invItem.warehouseID  === wareHouseidprovided})
+    console.log(invSublist);
+    res.json(invSublist); 
+    }
+)
+
+app.get('/inventory/:id', (req, res) => {
+    const incomingProductid = parseInt(req.params.id);
+//    const incomingProductid = 1;
+    const productDetail = invList.find((pItem) => 
+    { return pItem.productID  === incomingProductid})
+    console.log(productDetail);
+    res.json(productDetail); 
+    }
+)
+=======
 
 //--Get product detail--//
 app.get('/inventory/:id', (req,res) =>{
@@ -242,15 +272,13 @@ app.post('/warehouses', (req, res) => {
 
 
 
+>>>>>>> 007afa65e274a905439458fab87b71bc500ef23e
 app.delete('/inventory/deleteItem/:id', (req,res) => {
     let itemIndex = inventory.findIndex(item => item.productID === Number(req.params.id));
     inventory.splice(itemIndex, 1);
     res.json({msg: 'item deleted from inventory'});
 })
 
-app.listen(PORT, (err) => {
-    if (err) {
-        return console.log(err);
-    }
-    console.log(`server is listening on ${PORT}`)
-})
+  app.listen(8080, () => {
+    console.log('server is listening on 8080')
+  })

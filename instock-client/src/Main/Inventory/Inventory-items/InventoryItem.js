@@ -3,6 +3,9 @@ import {Link} from 'react-router-dom';
 
 
 class InventoryItem extends React.Component{
+
+    
+
     render(){
         return(
             <tr>

@@ -1,25 +1,42 @@
 import React from 'react';
 import InventoryItem from './Inventory-items/InventoryItem';
 import './inventory.css';
+// import { isNull } from 'util';
+// import { prependOnceListener } from 'cluster';
 
 let baseUrl = 'http://localhost:8080/';
 
 class Inventory extends React.Component{
 
     state = {
-        inventory: []
-    }
 
+        inventory: []
+    } 
+
+    componentDidMount = (prevProps) => {
+        if(this.props.urlId){
+         this.getNewinventorybywarehouse(this.props.urlId);
+        }
+        else {
+            this.getInventory();
+        }
+    }
+    getNewinventorybywarehouse = (id) => {
+       
+        fetch(`http://localhost:8080/warehouse/${id}`)
+          .then(serverAnswer => serverAnswer.json())
+          .then(wrhsInv => {
+            const inventory = wrhsInv
+            console.log(inventory);
+            this.setState({ inventory })
+          })
+          .catch(error => console.log(error))
+      }
+    
 
     getInventory = () => {
 
         let url = baseUrl + "inventory/"
-
-        if(this.match){
-            if(this.match.params.id){
-                url = url + this.match.params.id;
-            }
-        }   
 
         fetch(url)
         .then((resp) => {
@@ -30,6 +47,7 @@ class Inventory extends React.Component{
             console.error('Caught error: ', err)
         });
     }
+
 
     deleteItem = (event) => {
         fetch(baseUrl + 'inventory/deleteItem/' + event.target.id, {
@@ -46,15 +64,7 @@ class Inventory extends React.Component{
             console.error('Caught error: ' + err);
         })
     }
-
-    componentDidMount = () => {
-        this.getInventory();
-    }
-
-    componentDidUpdate = () => {
-        this.getInventory();
-    }
-
+    
     render(){
         if(this.state.inventory){
             let rows = this.state.inventory

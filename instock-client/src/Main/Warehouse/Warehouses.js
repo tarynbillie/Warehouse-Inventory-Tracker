@@ -85,4 +85,11 @@ export default class Warehouses extends Component {
             </section>
         )
     }
+<<<<<<< HEAD
+
 }
+
+export default Warehouses;
+=======
+}
+>>>>>>> 007afa65e274a905439458fab87b71bc500ef23e
