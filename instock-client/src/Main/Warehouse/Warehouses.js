@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import Warehouse from './Warehouse'
-
+import Warehouse from "./Warehouse.js";
+import {Link} from 'react-router-dom';
 
 class Warehouses extends Component{
 
     state={
+
         info:[]
     }
 
@@ -25,25 +26,27 @@ componentDidMount(){
         })
 }
 
-
-
-
     render(){
             let info = this.state.info;
             console.log(info)
-            let allHouses=info.map((place) =>{
-                return <Warehouse
-                id = {place.warehouseID}
+            let allHouses=info.map( (place) =>{
+                return (
+               
+                <Warehouse
+                key = {place.id}
+                id = {place.id}
                 location = {place.warehouseName}
                 street= {place.street}
                 city= {place.city}
+                province={place.province}
                 postal={place.postal}
                 contactName={place.contactName}
                 contactNumber={place.contactNumber}
                 contactEmail={place.contactEmail}
                 inventoryType={place.inventoryType}
                 />
-
+           
+            )
             })
 
         return(
@@ -62,4 +65,4 @@ componentDidMount(){
 
 }
 
-export default Warehouses
+export default Warehouses;

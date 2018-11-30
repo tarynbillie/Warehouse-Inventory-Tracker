@@ -2,7 +2,7 @@
 module.exports =  [
             {
                 productID: 1,
-                warehouseID: '001',
+                warehouseID: 1,
                 name: 'Socks',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -15,7 +15,7 @@ module.exports =  [
             },
             {
                 productID: 2,
-                warehouseID: '001',
+                warehouseID: 1,
                 name: 'Shoes',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -28,7 +28,7 @@ module.exports =  [
             },
             {
                 productID: 3,
-                warehouseID: '001',
+                warehouseID: 1,
                 name: 'Pants',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -41,7 +41,7 @@ module.exports =  [
             },
             {
                 productID: 4,
-                warehouseID: '001',
+                warehouseID: 1,
                 name: 'Shirt',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -54,7 +54,7 @@ module.exports =  [
             },
             {
                 productID: 5,
-                warehouseID: '001',
+                warehouseID: 1,
                 name: 'Hat',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -67,7 +67,7 @@ module.exports =  [
             },
             {
                 productID: 6,
-                warehouseID: '001',
+                warehouseID: 1,
                 name: 'Sweater',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -80,7 +80,7 @@ module.exports =  [
             },
             {
                 productID: 7,
-                warehouseID: '001',
+                warehouseID: 1,
                 name: 'boots',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -92,7 +92,7 @@ module.exports =  [
                 status: 'in stock'
             },{
                 productID: 8,
-                warehouseID: '001',
+                warehouseID: 1,
                 name: 'jacket',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -105,7 +105,7 @@ module.exports =  [
             },
             {
                 productID: 9,
-                warehouseID: '002',
+                warehouseID: 2,
                 name: 'Socks',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -113,12 +113,12 @@ module.exports =  [
                 referenceNo: 'CP234982.2',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Vancouver, BC',
                 status: 'in stock'
             },
             {
                 productID: 10,
-                warehouseID: '002',
+                warehouseID: 2,
                 name: 'Shoes',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -126,12 +126,12 @@ module.exports =  [
                 referenceNo: 'CP234982.2',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Vancouver, BC',
                 status: 'in stock'
             },
             {
                 productID: 11,
-                warehouseID: '002',
+                warehouseID: 2,
                 name: 'pants',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -139,12 +139,12 @@ module.exports =  [
                 referenceNo: 'CP234982.2',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Vancouver, BC',
                 status: 'in stock'
             },
             {
                 productID: 12,
-                warehouseID: '002',
+                warehouseID: 2,
                 name: 'shirt',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -152,12 +152,12 @@ module.exports =  [
                 referenceNo: 'CP234982.2',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Vancouver, BC',
                 status: 'in stock'
             },
             {
                 productID: 13,
-                warehouseID: '002',
+                warehouseID: 2,
                 name: 'hat',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -165,12 +165,12 @@ module.exports =  [
                 referenceNo: 'CP234982.2',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Vancouver, BC',
                 status: 'in stock'
             },
             {
                 productID: 14,
-                warehouseID: '002',
+                warehouseID: 2,
                 name: 'sweater',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -178,12 +178,12 @@ module.exports =  [
                 referenceNo: 'BPF292.34',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Vancouver, BC',
                 status: 'in stock'
             },
             {
                 productID: 15,
-                warehouseID: '002',
+                warehouseID: 2,
                 name: 'boots',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -191,12 +191,12 @@ module.exports =  [
                 referenceNo: 'BPF292.12',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Vancouver, BC',
                 status: 'in stock'
             },
             {
                 productID: 16,
-                warehouseID: '002',
+                warehouseID: 2,
                 name: 'jacket',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -204,12 +204,12 @@ module.exports =  [
                 referenceNo: 'SOL4145W301L',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Vancouver, BC',
                 status: 'in stock'
             },
             {
                 productID: 17,
-                warehouseID: '002',
+                warehouseID: 2,
                 name: 'gloves',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -217,12 +217,12 @@ module.exports =  [
                 referenceNo: 'OEMOIL5W301L',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Vancouver, BC',
                 status: 'in stock'
             },
             {
                 productID: 18,
-                warehouseID: '002',
+                warehouseID: 2,
                 name: 'scarf',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -230,12 +230,12 @@ module.exports =  [
                 referenceNo: 'TFL3839.93',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Vancouver, BC',
                 status: 'in stock'
             },
             {
                 productID: 19,
-                warehouseID: '003',
+                warehouseID: 3,
                 name: 'Socks',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -243,12 +243,12 @@ module.exports =  [
                 referenceNo: 'CP234982.2',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Regina, SK',
                 status: 'in stock'
             },
             {
                 productID: 20,
-                warehouseID: '003',
+                warehouseID: 3,
                 name: 'Shoes',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -256,12 +256,12 @@ module.exports =  [
                 referenceNo: 'BPF292.34',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Regina, SK',
                 status: 'in stock'
-            },
+            }, 
             {
                 productID: 21,
-                warehouseID: '003',
+                warehouseID: 3,
                 name: 'Pants',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -269,12 +269,12 @@ module.exports =  [
                 referenceNo: 'BPF292.12',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Regina, SK',
                 status: 'in stock'
             },
             {
                 productID: 22,
-                warehouseID: '003',
+                warehouseID: 3,
                 name: 'Shirt',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -282,12 +282,12 @@ module.exports =  [
                 referenceNo: 'SOL4145W301L',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Regina, SK',
                 status: 'in stock'
             },
             {
                 productID: 23,
-                warehouseID: '003',
+                warehouseID: 3,
                 name: 'Hat',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -295,12 +295,12 @@ module.exports =  [
                 referenceNo: 'OEMOIL5W301L',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Regina, SK',
                 status: 'in stock'
             },
             {
                 productID: 24,
-                warehouseID: '004',
+                warehouseID: 4,
                 name: 'Socks',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -308,12 +308,12 @@ module.exports =  [
                 referenceNo: 'CP234982.2',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Montreal, QC',
                 status: 'in stock'
             },
             {
                 productID: 25,
-                warehouseID: '004',
+                warehouseID: 4,
                 name: 'Shoes',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -321,12 +321,12 @@ module.exports =  [
                 referenceNo: 'BPF292.34',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Montreal, QC',
                 status: 'in stock'
             },
             {
                 productID: 26,
-                warehouseID: '004',
+                warehouseID: 4,
                 name: 'Pants',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -334,12 +334,12 @@ module.exports =  [
                 referenceNo: 'BPF292.12',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Montreal, QC',
                 status: 'in stock'
             },
             {
                 productID: 27,
-                warehouseID: '004',
+                warehouseID: 4,
                 name: 'Shirt',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -347,12 +347,12 @@ module.exports =  [
                 referenceNo: 'SOL4145W301L',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Montreal, QC',
                 status: 'in stock'
             },
             {
                 productID: 28,
-                warehouseID: '004',
+                warehouseID: 4,
                 name: 'Hat',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -360,12 +360,12 @@ module.exports =  [
                 referenceNo: 'OEMOIL5W301L',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Montreal, QC',
                 status: 'in stock'
             },
             {
                 productID: 29,
-                warehouseID: '004',
+                warehouseID: 4,
                 name: 'Sweater',
                 description: 'Brief product description goes here yo.',
                 lastOrdered: '05/24/2018',
@@ -373,7 +373,7 @@ module.exports =  [
                 referenceNo: 'TFL3839.93',
                 productCategory: 'Automotive',
                 quantity: 2000,
-                location: 'Toronto, ON',
+                location: 'Montreal, QC',
                 status: 'in stock'
             }
         ]

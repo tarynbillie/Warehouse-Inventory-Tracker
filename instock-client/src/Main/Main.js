@@ -4,6 +4,10 @@ import './main.css'
 
 class Main extends React.Component{
 
+    componentDidUpdate(){
+        console.log('main - updated')
+    }
+
     render(){
         console.log('dfgdfgfd')
         return(
