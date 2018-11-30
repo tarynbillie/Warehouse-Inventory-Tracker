@@ -1,9 +1,7 @@
 const express = require('express');
-const app = express();
-//you will need to create 'productInventoryList' for below line to work 
-// const productList = require('productInventoryList');
-const productList = [];
-// delete above empty array when file is created and available. 
+const app = express(); 
+const invList = require('./data/InventoryDataList');
+const whseList = require('./data/WarehouseDataList');
 
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 8080;
@@ -19,190 +17,60 @@ app.all('/*', function (req, res, next) {
     next();
 });
 
-app.get('/product/:id', (req, res) => {
-    const productCode = parseInt(req.params.id);
-    const productItem = productList.find((pItem) =>
-    { return pItem.id === productCode})
-    console.log(productItem);
-    res.json(productItem); 
-  })
-
-
-
-
-inventory= [
-    {
-        productID: 1,
-        warehouseID: '1jhdsfkjhskjdh',
-        name: 'Socks',
-        description: 'Premium socks made from Russian elk fur',
-        lastOrdered: '05/24/2018',
-        orderedBy: 'Jim Bob',
-        referenceNo: 'jhdsfhk76832738223',
-        productCategory: 'Automotive',
-        quantity: 2000,
-        location: 'Toronto, ON',
-        status: 'in stock'
-    },
-    {
-        productID: 2,
-        warehouseID: '2jhdsfkjhskjdh',
-        name: 'Shoes',
-        description: 'Nike high tops with a solid gold swoosh, because money',
-        lastOrdered: '05/24/2018',
-        orderedBy: 'Jim Bob',
-        referenceNo: 'jhdsfhk76832738223',
-        productCategory: 'Automotive',
-        quantity: 2000,
-        location: 'Toronto, ON',
-        status: 'in stock'
-    },
-    {
-        productID: 3,
-        warehouseID: '3jhdsfkjhskjdh',
-        name: 'Pants',
-        description: 'Sweet ass cargo pants with enough pockets for all your drugs',
-        lastOrdered: '05/24/2018',
-        orderedBy: 'Jim Bob',
-        referenceNo: 'jhdsfhk76832738223',
-        productCategory: 'Automotive',
-        quantity: 2000,
-        location: 'Toronto, ON',
-        status: 'in stock'
-    },
-    {
-        productID: 4,
-        warehouseID: '4jhdsfkjhskjdh',
-        name: 'Shirt',
-        description: 'Gucci, its all Gucci',
-        lastOrdered: '05/24/2018',
-        orderedBy: 'Jim Bob',
-        referenceNo: 'jhdsfhk76832738223',
-        productCategory: 'Automotive',
-        quantity: 2000,
-        location: 'Toronto, ON',
-        status: 'in stock'
-    },
-    {
-        productID: 5,
-        warehouseID: '5jhdsfkjhskjdh',
-        name: 'Hat',
-        description: 'Snap back, for when you go bald',
-        lastOrdered: '05/24/2018',
-        orderedBy: 'Jim Bob',
-        referenceNo: 'jhdsfhk76832738223',
-        productCategory: 'Automotive',
-        quantity: 2000,
-        location: 'Toronto, ON',
-        status: 'in stock'
-    },
-    {
-        productID: 6,
-        warehouseID: '6jhdsfkjhskjdh',
-        name: 'Sweater',
-        description: 'Pre-stained baggy sweater for that "im still drunk" look',
-        lastOrdered: '05/24/2018',
-        orderedBy: 'Jim Bob',
-        referenceNo: 'jhdsfhk76832738223',
-        productCategory: 'Automotive',
-        quantity: 2000,
-        location: 'Toronto, ON',
-        status: 'in stock'
-    },
-    {
-        productID: 7,
-        warehouseID: '7jhdsfkjhskjdh',
-        name: 'Spanx',
-        description: 'Look skinny in secconds! May cause organ displacement',
-        lastOrdered: '05/24/2018',
-        orderedBy: 'Jim Bob',
-        referenceNo: 'jhdsfhk76832738223',
-        productCategory: 'Automotive',
-        quantity: 2000,
-        location: 'Toronto, ON',
-        status: 'in stock'
-    },
-    {
-        productID: 8,
-        warehouseID: '8jhdsfkjhskjdh',
-        name: 'bandana',
-        description: 'Were all gansters at heart',
-        lastOrdered: '05/24/2018',
-        orderedBy: 'Jim Bob',
-        referenceNo: 'jhdsfhk76832738223',
-        productCategory: 'Automotive',
-        quantity: 2000,
-        location: 'Toronto, ON',
-        status: 'in stock'
-    },
-]
-
-warehouseInfo=[
-    {
-        warehouseID: 1,
-        warehouseName: "Warehouse Number 1",
-        street: '123 Main Street West',
-        city: 'Toronto, Canada',
-        postal: 'M6J 2H2',
-        contactName:'Mara Weinberg, Warehouse Manager',
-        contactNumber: '+1 416 678 2345',
-        contactEmail: 'mweinberg@instack.com',
-        inventoryType: 'Industrial, Automotive, Heavy Industry'
-    },
-    {
-        warehouseID: 2,
-        warehouseName: "Warehouse Number 2",
-        street: '123 Main Street West',
-        city: 'Toronto, Canada',
-        postal: 'M6J 2H2',
-        contactName:'Mara Weinberg, Warehouse Manager',
-        contactNumber: '+1 416 678 2345',
-        contactEmail: 'mweinberg@instack.com',
-        inventoryType: 'Industrial, Automotive, Heavy Industry'
-    },
-    {
-        warehouseID: 3,
-        warehouseName: "Warehouse Number 3",
-        street: '123 Main Street West',
-        city: 'Toronto, Canada',
-        postal: 'M6J 2H2',
-        contactName:'Mara Weinberg, Warehouse Manager',
-        contactNumber: '+1 416 678 2345',
-        contactEmail: 'mweinberg@instack.com',
-        inventoryType: 'Industrial, Automotive, Heavy Industry'
-    },
-    {
-        warehouseID: 4,
-        warehouseName: "Warehouse Number 4",
-        street: '123 Main Street West',
-        city: 'Toronto, Canada',
-        postal: 'M6J 2H2',
-        contactName:'Mara Weinberg, Warehouse Manager',
-        contactNumber: '+1 416 678 2345',
-        contactEmail: 'mweinberg@instack.com',
-        inventoryType: 'Industrial, Automotive, Heavy Industry'
-    },
-]
-
 
 app.get('/inventory', (req,res)=>{
-    res.json(inventory)
+    res.json(invList)
 })
 
 app.get('/warehouses', (req,res)=>{
-    res.json(warehouseInfo)
+    res.json(whseList)
+})
+
+app.get('/warehouse/:id', (req, res) => {
+    const wareHouseidprovided = parseInt(req.params.id);
+    const invSublist = invList.filter((invItem) => 
+    { return invItem.warehouseID  === wareHouseidprovided})
+    res.json(invSublist); 
+    }
+)
+
+app.get('/inventory/:id', (req, res) => {
+    const incomingProductid = parseInt(req.params.id);
+    const productDetail = invList.find((pItem) => 
+    { return pItem.productID  === incomingProductid})
+    res.json(productDetail); 
+    }
+)
+
+
+const newWarehouse = []
+let lastId = 5
+app.post('/warehouses', (req, res) => {
+    const newWarehouse = {
+        warehouseID: lastId++,
+        warehouse: req.body.warehouse,
+        street: req.body.street,
+        city: req.body.city,
+        country: req.body.country,
+        postalCode: req.body.postalCode,
+        mgmt: req.body.mgmt,
+        phone: req.body.phone,
+        email: req.body.email,
+        inventoryType: req.body.inventoryType
+    }
+    whseList.push(newWarehouse);
+    res.json(newWarehouse)
+    res.status(400).send('Oppsies');
+    
 })
 
 
 app.delete('/inventory/deleteItem/:id', (req,res) => {
-    let itemIndex = inventory.findIndex(item => item.productID === Number(req.params.id));
-    inventory.splice(itemIndex, 1);
+    let itemIndex = invList.findIndex(item => item.productID === Number(req.params.id));
+    invList.splice(itemIndex, 1);
     res.json({msg: 'item deleted from inventory'});
 })
 
-app.listen(PORT, (err) => {
-    if (err) {
-        return console.log(err);
-    }
-    console.log(`server is listening on ${PORT}`)
-})
+  app.listen(8080, () => {
+    console.log('server is listening on 8080')
+  })

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/app.css';
+import './css/appx.css';
 
 
 class LoginMember extends Component {
@@ -9,11 +9,11 @@ render() {
       <>
           <div className="drp-down">
             <nav className='menu-header'>
-                <img className="user-pic" src="./icons/User.svg" alt='users avatar'/>
-                <img className="drop-arrow" src='./icons/Dropdown.svg' atl='menu open arrow'/>
+                <img className="user-pic" src="../Assets/Icons/User.svg" alt='users avatar'/>
+                <img className="drop-arrow" src='../Assets/Icons/Dropdown.svg' alt='menu open arrow'/>
                     <ul className="nav-drp">
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Sign Out</a></li>
+                        <li className="uMenuitem"><a className="uItem" href="#">Profile</a></li>
+                        <li className="uMenuitem"><a className="uItem" href="#">Sign Out</a></li>
                     </ul>
                 </nav>
             </div>
