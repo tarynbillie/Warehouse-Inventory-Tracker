@@ -6,29 +6,27 @@ $secondPrimary: #003b77;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     // overflow-x: hidden;
+    font-family: 'Avenir';
   }
-
-
-@font-face {
-    font-family: 'Avenir';
-    src: url('../Typography/AvenirNext-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Avenir';
-    src: url('../Typography/AvenirNext-DemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
 
 @font-face {
     font-family: 'Avenir';
     src: url('../Typography/AvenirNext-Regular.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;
 }
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../Typography/AvenirNext-Medium.ttf') format('truetype');
+    font-weight: medium;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../Typography/AvenirNext-DemiBold.ttf') format('truetype');
+    font-weight: bold;
+}
+
 
 .App{
     display: flex;

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import './App.css';
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 import './App.css';
-import Warehouses from '../Main/Warehouse/Warehouses.js';
 import Inventory from '../Main/Inventory/Inventory.js';
 import ProductDetails from '../Main/Product-details/ProductDetails.js';
 import SideNav from '../Top-side-bars/SideNav.js';
 import Header from '../Top-side-bars/Header.js';
+import Warehouses from '../Main/Warehouse/Warehouses';
 
 
 class App extends Component {

@@ -1,0 +1,182 @@
+.form-container .inside-container__top {
+  margin: 1rem 1rem 0 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form-container .inside-container__top .close {
+  cursor: pointer;
+}
+
+.form-container .inside-container__top .close p {
+  margin: 0;
+  font-size: 12px;
+  color: #CACACA;
+}
+
+.form-container .inside-container__top .close p:hover {
+  color: #ADADAD;
+}
+
+.form-container .inside-container form {
+  margin: 1rem 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-container .inside-container form h4 {
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+}
+
+.form-container .inside-container form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.form-container .inside-container form label input {
+  height: 2.6rem;
+  width: 15rem;
+  fill: #FFFFFF;
+  border-radius: 2px;
+  border: 1px solid #CACACA;
+  outline: none;
+  margin-top: 0.3rem;
+  font-size: 14px;
+  padding-left: 14px;
+}
+
+.form-container .inside-container form label input::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #7C7C7C;
+  opacity: 100%;
+}
+
+.form-container .inside-container form label input:-ms-input-placeholder {
+  font-size: 14px;
+  color: #7C7C7C;
+  opacity: 100%;
+}
+
+.form-container .inside-container form label input::-ms-input-placeholder {
+  font-size: 14px;
+  color: #7C7C7C;
+  opacity: 100%;
+}
+
+.form-container .inside-container form label input::placeholder {
+  font-size: 14px;
+  color: #7C7C7C;
+  opacity: 100%;
+}
+
+.form-container .inside-container form label select {
+  height: 2.6rem;
+  width: 15rem;
+  fill: #FFFFFF;
+  border-radius: 2px;
+  border: 1px solid #CACACA;
+  outline: none;
+  margin-top: 0.3rem;
+  font-size: 14px;
+  padding-left: 14px;
+  background: url(../../icons/Dropdown.svg) no-repeat;
+  background-size: 10px;
+  background-position: 95%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 0 0.8rem;
+}
+
+.form-container .inside-container form label select select {
+  background: transparent;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100px;
+  font-size: 14px;
+  border: 0;
+  height: 17px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.form-container .inside-container form label select::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #7C7C7C;
+  opacity: 100%;
+}
+
+.form-container .inside-container form label select:-ms-input-placeholder {
+  font-size: 14px;
+  color: #7C7C7C;
+  opacity: 100%;
+}
+
+.form-container .inside-container form label select::-ms-input-placeholder {
+  font-size: 14px;
+  color: #7C7C7C;
+  opacity: 100%;
+}
+
+.form-container .inside-container form label select::placeholder {
+  font-size: 14px;
+  color: #7C7C7C;
+  opacity: 100%;
+}
+
+.form-container .inside-container form .information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-top: 3rem;
+}
+
+.form-container .inside-container form .information__first {
+  padding-right: 5.5rem;
+}
+
+.form-container .inside-container .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.form-container .inside-container .btn button {
+  margin-top: 1.5rem;
+  background-color: #004892;
+  border: none;
+  border-radius: 3px;
+  height: 38px;
+  width: 131px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/*# sourceMappingURL=modal.css.map */

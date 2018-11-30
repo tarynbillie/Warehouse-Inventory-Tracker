@@ -27,9 +27,6 @@ app.get('/product/:id', (req, res) => {
     res.json(productItem); 
   })
 
-
-
-
 inventory= [
     {
         productID: 1,
@@ -140,46 +137,50 @@ inventory= [
 warehouseInfo=[
     {
         warehouseID: 1,
-        warehouseName: "Warehouse Number 1",
+        warehouse: "Warehouse Number 1",
         street: '123 Main Street West',
-        city: 'Toronto, Canada',
-        postal: 'M6J 2H2',
-        contactName:'Mara Weinberg, Warehouse Manager',
-        contactNumber: '+1 416 678 2345',
-        contactEmail: 'mweinberg@instack.com',
+        city: 'Toronto,',
+        country: 'Canada',
+        postalCode: 'M6J 2H2',
+        mgmt:'Mara Weinberg',
+        phone: '+1 416 678 2345',
+        email: 'mweinberg@instack.com',
         inventoryType: 'Industrial, Automotive, Heavy Industry'
     },
     {
         warehouseID: 2,
-        warehouseName: "Warehouse Number 2",
+        warehouse: "Warehouse Number 2",
         street: '123 Main Street West',
-        city: 'Toronto, Canada',
-        postal: 'M6J 2H2',
-        contactName:'Mara Weinberg, Warehouse Manager',
-        contactNumber: '+1 416 678 2345',
-        contactEmail: 'mweinberg@instack.com',
+        city: 'Toronto,',
+        country: 'Canada',
+        postalCode: 'M6J 2H2',
+        mgmt:'Mara Weinberg',
+        phone: '+1 416 678 2345',
+        email: 'mweinberg@instack.com',
         inventoryType: 'Industrial, Automotive, Heavy Industry'
     },
     {
         warehouseID: 3,
-        warehouseName: "Warehouse Number 3",
+        warehouse: "Warehouse Number 3",
         street: '123 Main Street West',
-        city: 'Toronto, Canada',
-        postal: 'M6J 2H2',
-        contactName:'Mara Weinberg, Warehouse Manager',
-        contactNumber: '+1 416 678 2345',
-        contactEmail: 'mweinberg@instack.com',
+        city: 'Toronto,',
+        country: 'Canada',
+        postalCode: 'M6J 2H2',
+        mgmt:'Mara Weinberg',
+        phone: '+1 416 678 2345',
+        email: 'mweinberg@instack.com',
         inventoryType: 'Industrial, Automotive, Heavy Industry'
     },
     {
         warehouseID: 4,
-        warehouseName: "Warehouse Number 4",
+        warehouse: "Warehouse Number 4",
         street: '123 Main Street West',
-        city: 'Toronto, Canada',
-        postal: 'M6J 2H2',
-        contactName:'Mara Weinberg, Warehouse Manager',
-        contactNumber: '+1 416 678 2345',
-        contactEmail: 'mweinberg@instack.com',
+        city: 'Toronto,',
+        country: 'Canada',
+        postalCode: 'M6J 2H2',
+        mgmt:'Mara Weinberg',
+        phone: '+1 416 678 2345',
+        email: 'mweinberg@instack.com',
         inventoryType: 'Industrial, Automotive, Heavy Industry'
     },
 ]
@@ -191,7 +192,34 @@ app.get('/inventory', (req,res)=>{
 
 app.get('/warehouses', (req,res)=>{
     res.json(warehouseInfo)
+
 })
+
+const newWarehouse = []
+let lastId = 5
+app.post('/warehouses', (req, res) => {
+    const newWarehouse = {
+        warehouseID: lastId++,
+        warehouse: req.body.warehouse,
+        street: req.body.street,
+        city: req.body.city,
+        country: req.body.country,
+        postalCode: req.body.postalCode,
+        mgmt: req.body.mgmt,
+        phone: req.body.phone,
+        email: req.body.email,
+        inventoryType: req.body.inventoryType
+    }
+    warehouseInfo.push(newWarehouse);
+    res.json(newWarehouse)
+    res.status(400).send('Oppsies');
+    
+})
+
+// app.get('/warehouses', (req, res) => {
+//     res.json(newWarehouse);
+// })
+
 
 
 app.delete('/inventory/deleteItem/:id', (req,res) => {

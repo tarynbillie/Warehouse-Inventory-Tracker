@@ -1,65 +1,88 @@
 import React, { Component } from 'react';
 import Warehouse from './Warehouse'
+import Modal from './Modal';
+import './warehouses.css';
 
+export default class Warehouses extends Component {
+    constructor(props) {
+        super(props);
 
-class Warehouses extends Component{
+    }
+    state = {
+        info: [],
+        isOpen: false
+    }
 
-    state={
-        info:[]
+    showModal = () => {
+        this.setState({
+            isOpen: true
+        });
+    };
+
+    hideModal = () => {
+        this.setState({
+            isOpen: false
+        });
+    };
+
+    getWarehouse = () => {
+        fetch('http://localhost:8080/warehouses')
+
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data)
+            this.setState({ info: data })
+        })
+        .catch(error => {
+            console.log(error)
+        })
+    }
+
+    componentDidMount() {
+        this.getWarehouse();
+    }
+
+    componentDidUpdate () {
+        this.getWarehouse();
     }
 
 
-componentDidMount(){
-    fetch('http://localhost:8080/warehouses')
-
-    .then((response) =>{
-        return response.json();
-    })
-    .then((data) => {   
-        console.log(data)
-        this.setState({info: data})
-        
-        })
-    .catch( error => {
-        console.log(error)
-        })
-}
-
-
-
-
-    render(){
-            let info = this.state.info;
-            console.log(info)
-            let allHouses=info.map((place) =>{
-                return <Warehouse
-                id = {place.warehouseID}
-                location = {place.warehouseName}
-                street= {place.street}
-                city= {place.city}
-                postal={place.postal}
-                contactName={place.contactName}
-                contactNumber={place.contactNumber}
-                contactEmail={place.contactEmail}
+    render() {
+        let info = this.state.info;
+        console.log(info)
+        let allHouses = info.map((place) => {
+            return <Warehouse
+                id={place.warehouseID}
+                warehouse={place.warehouse}
+                street={place.street}
+                city={place.city}
+                country={place.country}
+                postalCode={place.postalCode}
+                mgmt={place.mgmt}
+                phone={place.phone}
+                email={place.email}
                 inventoryType={place.inventoryType}
-                />
+            />
+        })
 
-            })
+        return (
+            <section>
+                <Modal handleClose={this.hideModal} isOpen={this.state.isOpen} />
+                <div className='warehouses-page'>
+                    <div className='warehouse-page__titles'>
+                        <p className='location'>Locations</p>
+                        <p className='filter'>Filter</p>
+                    </div>
+                    {allHouses}
+                </div>
+                <div className='modal-btn'>
+                    <img src='../Assets/Icons/Plus.svg' onClick={this.showModal} />
+                </div>
 
-        return(
-            
-            <div className='warehouses-page'>
-            
-                <div className='warehouse-page__titles'>
-                     <p className='location'>Locations</p>
-                     <p className='filter'>Filter</p>
-                 </div>
-                 
-                { allHouses }
-            </div>
+
+            </section>
         )
     }
-
 }
-
-export default Warehouses
