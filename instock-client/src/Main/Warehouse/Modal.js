@@ -26,10 +26,6 @@ class Modal extends Component {
         }
     }
 
-    state = {
-        isOpen: false
-    }
-
 
     handleChange(e) {
         this.setState({
@@ -69,7 +65,7 @@ class Modal extends Component {
               };
             fetch('http://localhost:8080/warehouses', init)
             .then(() => {
-                this.props.hideModal();
+                this.props.handleClose();
             })
 
         }
@@ -94,17 +90,17 @@ class Modal extends Component {
     render() {
         return (
             <div style={{ ...flex, display: this.props.isOpen ? 'flex' : 'none' }}>
-                {/* <div className='modal-layer' onClick={this.props.handleClose} style={modalLayer}></div> */}
+                <div className='modal-layer' onClick={this.props.handleClose} style={modalLayer}></div>
                 <div className="form-container" style={formModal}>
                     <div className='inside-container'>
                         <div className='inside-container__top'>
                             <h1>Add a new storage location</h1>
-                            <div className='close' onClick={this.props.hideModal}>
+                            <div className='close' onClick={this.props.handleClose}>
                                 <img src='../Assets/Icons/Close.svg' />
                                 <p>CLOSE</p>
                             </div>
                         </div>
-                        <form onSubmit={this.formSubmit}>
+                        <form onSubmit={this.formSubmit} formReset={this.formReset}>
                             <label>
                                 Warehouse Name
                             <input type='text' name='warehouse' placeholder='Michael Scott Paper Co.' value={this.state.warehouse} onChange={this.handleChange}></input>
@@ -152,9 +148,9 @@ class Modal extends Component {
                                         Inventory type
                                 <select name='inventoryType' value={this.state.inventoryType} onChange={this.handleChange}>
                                             <option value=''>Select Type</option>
-                                            <option>Type 1</option>
-                                            <option>Type 2</option>
-                                            <option>Type 3</option>
+                                            <option>Industrial</option>
+                                            <option>Automotive</option>
+                                            <option>Paper</option>
                                         </select>
                                     </label>
                                 </div>
@@ -172,14 +168,16 @@ class Modal extends Component {
 }
 
 Modal.propTypes = {
-    // handleClose: PropTypes.func.isRequired,
+    handleClose: PropTypes.func.isRequired,
     isOpen: PropTypes.bool.isRequired,
 };
 
 export default Modal;
 
 const flex = {
-    // position: 'fixed',
+    position: 'fixed',
+    top: 0,
+    left: 0,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -190,13 +188,13 @@ const flex = {
     backgroundColor: 'rgba(57,57,57,0.6)',
 };
 
-// const modalLayer = {
-//     position: 'fixed',
-//     width: '100vw',
-//     height: '100vh',
-//     zIndex: 1,
-//     backgroundColor: 'transparent'
-// };
+const modalLayer = {
+    position: 'fixed',
+    width: '100vw',
+    height: '100vh',
+    zIndex: 1,
+    backgroundColor: 'transparent'
+};
 
 const formModal = {
     position: 'absolute',
@@ -204,7 +202,6 @@ const formModal = {
     backgroundColor: '#FFFFFF',
     width: '700px',
     maxWidth: '100%',
-    height: '700px',
     maxHeight: '100%',
     zIndex: 2,
     borderRadius: '3px',

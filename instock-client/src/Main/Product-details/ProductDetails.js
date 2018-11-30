@@ -3,23 +3,23 @@ import './PDStyles.css';
 
 
 
-let inventory = [
-    {
-        productID: 1,
-        warehouseID: 'jhdsfkjhskjdh',
-        name: 'name',
-        description: '...',
-        lastOrdered: '05/24/2018',
-        orderedBy: 'Jim Bob',
-        referenceNo: 'jhdsfhk76832738223',
-        productCategory: 'Automotive',
-        quantity: 2000,
-        location: 'Toronto, ON',
-        status: 'in stock'
-    }
- ]
+// let inventory = [
+//     {
+//         productID: 1,
+//         warehouseID: 'jhdsfkjhskjdh',
+//         name: 'name',
+//         description: '...',
+//         lastOrdered: '05/24/2018',
+//         orderedBy: 'Jim Bob',
+//         referenceNo: 'jhdsfhk76832738223',
+//         productCategory: 'Automotive',
+//         quantity: 2000,
+//         location: 'Toronto, ON',
+//         status: 'in stock'
+//     }
+//  ]
 
- class ProductDetail extends React.Component {
+ class ProductDetails extends React.Component {
      state = {  }
      render() { 
          return ( 
@@ -70,4 +70,4 @@ let inventory = [
      }
  }
   
- export default ProductDetail;
+ export default ProductDetails;
