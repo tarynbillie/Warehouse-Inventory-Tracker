@@ -23,7 +23,7 @@ app.get('/product/:id', (req, res) => {
     const productCode = parseInt(req.params.id);
     const productItem = productList.find((pItem) =>
     { return pItem.id === productCode})
-    console.log(productItem);
+    // console.log(productItem);
     res.json(productItem); 
   })
 
@@ -189,6 +189,26 @@ warehouseInfo=[
 app.get('/inventory', (req,res)=>{
     res.json(inventory)
 })
+
+//--Get product detail--//
+app.get('/inventory/:id', (req,res) =>{
+    let inventoryId= req.params.id
+    console.log(inventoryId)
+    let findProduct= inventory.find(product =>{
+        return product.productID ==inventoryId 
+        
+    })
+    // console.log(findProduct)
+    res.json(findProduct)
+})
+
+// app.get('/inventory/:id', (req,res) =>{
+//     let inventoryId= req.params.id
+//         res.json(inventory[{inventoryId}-1])
+// })
+
+
+
 
 app.get('/warehouses', (req,res)=>{
     res.json(warehouseInfo)
