@@ -8,10 +8,11 @@ module.exports = [
             "street": "123 Renforth Drive",
             "city": "Toronto", 
             "province": "Ontario",
-            "postal": "M5J2H2", 
-            "contactName":'Mara Weinberg, Warehouse Manager',
-            "contactNumber": '+1-416-678-2345',
-            "contactEmail": 'mweinberg@instack.com',
+            "postalCode": "M5J2H2", 
+            "country": "Canada", 
+            "mgmt":'Mara Weinberg',
+            "phone": '+1-416-678-2345',
+            "email": 'mweinberg@instack.com',
             "inventoryType": 'Industrial, Automotive, Heavy Industry'
         },
         {
@@ -19,13 +20,14 @@ module.exports = [
             "title": "Vancouver",
             "locationCode": "YVR", 
             "warehouseName": "Warehouse Number 2",
-             "street": "4500 North Service Road",
+            "street": "4500 North Service Road",
             "city": "Vancouver", 
             "provice": "British Columbia", 
-            "postal": "V3Y2A8", 
-            "contactName":'Mara Weinberg, Warehouse Manager',
-            "contactNumber": '+1-604-678-2345',
-            "contactEmail": 'mweinberg@instack.com',
+            "postalCode": "V3Y2A8", 
+            "country": "Canada", 
+            "mgmt":'Mara Weinberg',
+            "phone": '+1-604-678-2345',
+            "email": 'mweinberg@instack.com',
             "inventoryType": 'Industrial, Automotive, Heavy Industry'
         },
         {
@@ -36,10 +38,11 @@ module.exports = [
             "street": "300 Airport Road",
             "city": "Regina", 
             "province": "Saskatchewan",
-            "postal": "V3Y2A8", 
-            "contactName":'Mara Weinberg, Warehouse Manager',
-            "contactNumber": '+1-306-678-2345',
-            "contactEmail": 'mweinberg@instack.com',
+            "postalCode": "V3Y2A8", 
+            "country": "Canada", 
+            "mgmt":'Mara Weinberg',
+            "phone": '+1-306-678-2345',
+            "email": 'mweinberg@instack.com',
             "inventoryType": 'Industrial, Automotive, Heavy Industry'
         },
         {
@@ -50,10 +53,11 @@ module.exports = [
             "street": "50 Sources Boulevard",
             "city": "Montreal", 
             "province": "Quebec",
-            "postal": "H9A5T1", 
-            "contactName":'Mara Weinberg, Warehouse Manager',
-            "contactNumber": '+1-306-678-2345',
-            "contactEmail": 'mweinberg@instack.com',
+            "postalCode": "H9A5T1", 
+            "country": "Canada", 
+            "mgmt":'Mara Weinberg',
+            "phone": '+1-306-678-2345',
+            "email": 'mweinberg@instack.com',
             "inventoryType": 'Industrial, Automotive, Heavy Industry'
     
         }
