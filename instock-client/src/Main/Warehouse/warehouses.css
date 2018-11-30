@@ -1,13 +1,21 @@
 .modal-btn {
-  position: absolute;
-  top: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 70%;
   left: 85%;
   background-color: #004892;
   height: 65px;
   width: 65px;
   border-radius: 50%;
   color: white;
-  text-align: center;
   font-size: 3rem;
   cursor: pointer;
   -webkit-box-shadow: 0px 40px 55px 0px rgba(0, 0, 0, 0.15);

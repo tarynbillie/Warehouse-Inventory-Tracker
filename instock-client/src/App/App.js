@@ -26,7 +26,7 @@ class App extends Component {
                 <Route exact path={'/warehouse/:id'} render={(props) => 
                 <Inventory urlId={props.match.params.id}/>}/> 
                 <Route exact path={'/inventory/:id'} component={ProductDetails}/>
-                <Route exact path={'/'} render={() => <Redirect to='/inventory' />} />
+                <Route exact path={'/'} render={() => <Redirect to='/warehouses' />} />
               </Switch>
             </main>
           </div>
